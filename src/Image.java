@@ -6,6 +6,7 @@ public class Image {
         for (int i = 0; i < image.length; i++) {
             System.out.println(Arrays.toString(image[i]));
         }
+        System.out.println("Pourcentage de points blancs : " + compterPointsBlancs(image));
     }
     public static int[][] creerImage() {
         System.out.println("Entrez la largeur de l'image");
