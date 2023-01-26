@@ -9,6 +9,10 @@ public class Image {
         System.out.println("Pourcentage de points blancs : " + compterPointsBlancs(image));
         System.out.println("Image éclaircie :");
         int[][] imageEclaircie = eclaircirImage(image);
+        for (int i = 0; i < imageEclaircie.length; i++) {
+            System.out.println(Arrays.toString(imageEclaircie[i]));
+        }
+
     }
 
     public static int[][] eclaircirImage(int[][] image) {
