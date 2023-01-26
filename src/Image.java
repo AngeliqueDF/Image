@@ -8,6 +8,17 @@ public class Image {
         }
         System.out.println("Pourcentage de points blancs : " + compterPointsBlancs(image));
     }
+    public static float compterPointsBlancs(int[][] image) {
+        int res = 0;
+        for (int i = 0; i < image.length; i++) {
+            for (int j = 0; j < image[0].length; j++) {
+                if (image[i][j] == 0)
+                    res++;
+            }
+        }
+        System.out.println(image.length * image[0].length);
+        return ((float) res / (image.length * image[0].length)) * 100;
+    }
     public static int[][] creerImage() {
         System.out.println("Entrez la largeur de l'image");
         int largeur = Terminal.lireInt();
