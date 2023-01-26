@@ -40,6 +40,7 @@ public class Image {
         System.out.println(image.length * image[0].length);
         return ((float) res / (image.length * image[0].length)) * 100;
     }
+
     public static int[][] creerImage() {
         System.out.println("Entrez la largeur de l'image");
         int largeur = Terminal.lireInt();
