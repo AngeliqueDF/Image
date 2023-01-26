@@ -63,3 +63,9 @@ public class Image {
         return image;
     }
 }
+
+class NiveauGrisException extends RuntimeException {
+    NiveauGrisException() {
+        super("Erreur : le niveau de gris doit être une valeur numérique comprise entre 0 et 255.");
+    }
+};
