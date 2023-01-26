@@ -7,7 +7,24 @@ public class Image {
             System.out.println(Arrays.toString(image[i]));
         }
         System.out.println("Pourcentage de points blancs : " + compterPointsBlancs(image));
+        System.out.println("Image éclaircie :");
+        int[][] imageEclaircie = eclaircirImage(image);
     }
+
+    public static int[][] eclaircirImage(int[][] image) {
+        int[][] copieImage = new int[image.length][image[0].length];
+        for (int i = 0; i < copieImage.length; i++) {
+            for (int j = 0; j < copieImage[0].length; j++) {
+                if (image[i][j] + 30 > 255) {
+                    copieImage[i][j] = 255;
+                } else {
+                    copieImage[i][j] = image[i][j] + 30;
+                }
+            }
+        }
+        return copieImage;
+    }
+
     public static float compterPointsBlancs(int[][] image) {
         int res = 0;
         for (int i = 0; i < image.length; i++) {
