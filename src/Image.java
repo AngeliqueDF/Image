@@ -3,6 +3,9 @@ import java.util.Arrays;
 public class Image {
     public static void main(String[] args) {
         int[][] image = creerImage();
+        for (int i = 0; i < image.length; i++) {
+            System.out.println(Arrays.toString(image[i]));
+        }
     }
     public static int[][] creerImage() {
         System.out.println("Entrez la largeur de l'image");
